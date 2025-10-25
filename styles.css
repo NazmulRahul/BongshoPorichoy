@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+    background-size: 400% 400%;
+    animation: gradientShift 5s ease infinite;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+
+h1 {
+    font-size: 3.5em;
+    color: #ff0000;
+    text-shadow: 4px 4px 0px #000, 
+                 8px 8px 0px rgba(255, 0, 0, 0.5);
+    margin-bottom: 10px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.7; }
+}
+
+.subtitle {
+    font-size: 1.8em;
+    color: #fff;
+    background: #ff0000;
+    padding: 10px 20px;
+    display: inline-block;
+    transform: rotate(-3deg);
+    border: 5px dashed #000;
+    margin-top: 20px;
+}
+
+.shame-task {
+    background: yellow;
+    border: 5px solid red;
+    padding: 15px;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    transform: rotate(1deg);
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.3);
+}
+
+.leaderboard {
+    background: rgba(255, 255, 255, 0.95);
+    border: 10px solid #000;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+.shame-item {
+    background: linear-gradient(135deg, #ffeb3b, #ff9800);
+    margin: 15px 0;
+    padding: 20px;
+    border: 5px solid #f44336;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.shame-item:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.shame-item.gold {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    border-color: #ff0000;
+    border-width: 8px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+.shame-item.silver {
+    background: linear-gradient(135deg, #c0c0c0, #e8e8e8);
+}
+
+.shame-item.bronze {
+    background: linear-gradient(135deg, #cd7f32, #f0ad4e);
+}
+
+.rank {
+    font-size: 3em;
+    font-weight: bold;
+    margin-right: 20px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.name {
+    flex-grow: 1;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #000;
+}
+
+.count {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50%;
+    min-width: 80px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.emoji {
+    font-size: 2em;
+    margin: 0 10px;
+}
+
+.trophy {
+    position: absolute;
+    font-size: 3em;
+    opacity: 0.3;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.add-section {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border: 5px dashed #ff0000;
+    border-radius: 15px;
+}
+
+.add-section h2 {
+    color: #ff0000;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.input-group {
+    margin: 15px 0;
+}
+
+input {
+    padding: 12px;
+    font-size: 1.2em;
+    border: 3px solid #000;
+    border-radius: 8px;
+    width: 70%;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.3em;
+    background: #ff0000;
+    color: white;
+    border: 4px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive;
+    font-weight: bold;
+    margin: 10px 5px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #cc0000;
+    transform: scale(1.1);
+}
+
+.sticker {
+    position: fixed;
+    font-size: 3em;
+    animation: rotate 4s linear infinite;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
