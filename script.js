@@ -1,8 +1,9 @@
 // Initial shameful data
 let shameData = [
-    { name: "Stinky মামুন ", count: 7 },
+    { name: "Stinky মামুন ", count: 8 },
     { name: "Disappointment আসিফ", count: 4 },
     { name: "Embarrassment ইমরান", count: 3 },
+    {name: "Careless শুভ",count: 1},
 ];
 
 const embarassingAdjectives = [
